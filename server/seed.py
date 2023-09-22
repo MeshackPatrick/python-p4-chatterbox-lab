@@ -13,6 +13,7 @@ usernames = [fake.first_name() for i in range(4)]
 if "Duane" not in usernames:
     usernames.append("Duane")
 
+
 def make_messages():
 
     Message.query.delete()
@@ -28,6 +29,7 @@ def make_messages():
 
     db.session.add_all(messages)
     db.session.commit()        
+
 
 if __name__ == '__main__':
     with app.app_context():
